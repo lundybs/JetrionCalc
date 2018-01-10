@@ -1,0 +1,10 @@
+C:\src\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.csprojResolveAssemblyReference.cache
+C:\src\LabelCalculator\LabelCalculator\obj\Debug\MainWindow.g.cs
+C:\src\LabelCalculator\LabelCalculator\obj\Debug\App.g.cs
+C:\src\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator_MarkupCompile.cache
+C:\src\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator_MarkupCompile.lref
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.csprojResolveAssemblyReference.cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\MainWindow.g.cs
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\App.g.cs
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator_MarkupCompile.cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator_MarkupCompile.lref
