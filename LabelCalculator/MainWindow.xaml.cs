@@ -20,18 +20,20 @@ namespace LabelCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        CalcLibrary calc = new CalcLibrary();
+
         public MainWindow()
         {
             InitializeComponent();
-            txtLabelQuanity.Focus();
+            LabelQuanityTextBox.Focus();
         }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e) //This is the about menu
+        
+        private void MenuItem_Click_Help(object sender, RoutedEventArgs e) //This is the about menu
         {
             MessageBox.Show("This is a working prototype, not a final product yet.", "About", MessageBoxButton.OKCancel, MessageBoxImage.Information);
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e) //This cloes the application in the menu
+        private void MenuItem_Click_Exit(object sender, RoutedEventArgs e) //This cloes the application in the menu
         {
             this.Close();
         }
@@ -70,7 +72,7 @@ namespace LabelCalculator
                 {
                     try
                     {
-                        
+
                     }
                     catch
                     {
@@ -90,6 +92,26 @@ namespace LabelCalculator
                 e.Handled = true;
                 uie.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
             }
+        }
+        
+        private void CalcuateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClearListButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FiftyFootStopButton_Click(object sender, RoutedEventArgs e)
+        {
+            calc.FiftyFootStop(PixelLengthTextBox.Text);
+        }
+
+        private void PDOffSetButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
