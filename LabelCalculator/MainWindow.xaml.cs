@@ -67,7 +67,7 @@ namespace LabelCalculator
             {
                 e.Handled = true;
 
-                if (null) { }
+                if (0 == 0) { }
                 else
                 {
                     try
@@ -106,7 +106,7 @@ namespace LabelCalculator
 
         private void FiftyFootStopButton_Click(object sender, RoutedEventArgs e)
         {
-            calc.FiftyFootStop(PixelLengthTextBox.Text);
+            calc.FiftyFootStop(PixelLengthTextBox.Text, TotalStopTextBox.Text, PrintedStopTextBox.Text);
         }
 
         private void PDOffSetButton_Click(object sender, RoutedEventArgs e)
