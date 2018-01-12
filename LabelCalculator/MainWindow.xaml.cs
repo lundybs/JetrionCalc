@@ -27,7 +27,7 @@ namespace LabelCalculator
             InitializeComponent();
             LabelQuanityTextBox.Focus();
         }
-        
+
         private void MenuItem_Click_Help(object sender, RoutedEventArgs e) //This is the about menu
         {
             MessageBox.Show("This is a working prototype, not a final product yet.", "About", MessageBoxButton.OKCancel, MessageBoxImage.Information);
@@ -93,9 +93,25 @@ namespace LabelCalculator
                 uie.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
             }
         }
-        
+
         private void CalcuateButton_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                calc.LabelInfo(LabelQuanityTextBox.Text, PixelLengthTextBox.Text, LabelsPerImageTextBox.Text, EyeMarksTextBox.Text);
+                TailTextBox.Text = calc.TailCalculation();
+                LeaderTextBox.Text = calc.LeaderCalculation();
+                itemBlankTextBox.Text = calc.ItemBlankCalculation();
+                FiftyFeetTextBox.Text = calc.FiftyFootCalculation();
+                OneHundredFeetTextBox.Text = calc.FiftyFootCalculation();
+                ThreeHundredFeetTextBox.Text = calc.ThreeHundredFootCalcation();
+                OneEighthPitchTextBox.Text = calc.EighthPitchCalculation();
+                ThirtyTwoPitchTextBox.Text = calc.ThirtyTwoPitchCalculation();
+            }
+            catch
+            {
+                MessageBox.Show("You did not enter in a correct number", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
         }
 
