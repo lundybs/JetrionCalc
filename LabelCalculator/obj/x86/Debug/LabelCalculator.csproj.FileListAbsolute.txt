@@ -15,3 +15,4 @@ C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalcul
 C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.csproj.CoreCompileInputs.cache
 C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.exe
 C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.pdb
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.csprojResolveAssemblyReference.cache
