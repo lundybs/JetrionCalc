@@ -9,3 +9,15 @@ C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\App.g.cs
 C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator_MarkupCompile.cache
 C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator_MarkupCompile.lref
 C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\Debug\LabelCalculator.exe.config
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\Debug\LabelCalculator.exe
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\Debug\LabelCalculator.pdb
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\Debug\System.Net.Http.dll
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\Debug\System.Net.Http.xml
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\Debug\ja\System.Net.Http.resources.dll
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\MainWindow.baml
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.g.resources
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.Properties.Resources.resources
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.csproj.GenerateResource.Cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.csproj.CoreCompileInputs.cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.exe
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\Debug\LabelCalculator.pdb

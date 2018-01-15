@@ -14,15 +14,15 @@ namespace LabelCalculator
             return itemFootage = Math.Round(((pixelSize / 360) * double.Parse(totalLabels)), 2);
         }
 
-        public double FiftyFootStop(string pixels, string currentLabelQuantity, string printedLabelsQuantity)
+        public string FiftyFootStop(string pixels, string currentLabelQuantity, string printedLabelsQuantity)
         {
             pixelSize = double.Parse(pixels);
             double currentLabel = double.Parse(currentLabelQuantity);
             double printedLabels = double.Parse(printedLabelsQuantity);
 
             CalcuateFiftyFeetImages();
-            double newQuantityOfLabels = (currentLabel - printedLabels) + fiftyFeetImages;
-            return newQuantityOfLabels = ((int)newQuantityOfLabels + 1);
+            int newQuantityOfLabels = (int)((currentLabel - printedLabels) + fiftyFeetImages);
+            return newQuantityOfLabels.ToString();
         }
 
         private void CalcuateFiftyFeetImages()

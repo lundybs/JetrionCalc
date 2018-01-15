@@ -1,0 +1,17 @@
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\x86\Debug\LabelCalculator.exe.config
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\x86\Debug\LabelCalculator.exe
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\x86\Debug\LabelCalculator.pdb
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\x86\Debug\System.Net.Http.dll
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\x86\Debug\System.Net.Http.xml
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\bin\x86\Debug\ja\System.Net.Http.resources.dll
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\MainWindow.g.cs
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\App.g.cs
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator_MarkupCompile.cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator_MarkupCompile.lref
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\MainWindow.baml
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.g.resources
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.Properties.Resources.resources
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.csproj.GenerateResource.Cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.csproj.CoreCompileInputs.cache
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.exe
+C:\Users\crusi\Desktop\LabelCalculator\LabelCalculator\obj\x86\Debug\LabelCalculator.pdb

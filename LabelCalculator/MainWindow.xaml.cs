@@ -21,6 +21,8 @@ namespace LabelCalculator
     public partial class MainWindow : Window
     {
         CalcLibrary calc = new CalcLibrary();
+        private double extraFootage = 0;
+        private double percentage = 0;
 
         public MainWindow()
         {
@@ -99,6 +101,7 @@ namespace LabelCalculator
             try
             {
                 calc.LabelInfo(LabelQuanityTextBox.Text, PixelLengthTextBox.Text, LabelsPerImageTextBox.Text, EyeMarksTextBox.Text);
+                calc.LabelTotals(percentage, extraFootage);
                 TailTextBox.Text = calc.TailCalculation();
                 LeaderTextBox.Text = calc.LeaderCalculation();
                 itemBlankTextBox.Text = calc.ItemBlankCalculation();
@@ -122,12 +125,111 @@ namespace LabelCalculator
 
         private void FiftyFootStopButton_Click(object sender, RoutedEventArgs e)
         {
-            calc.FiftyFootStop(PixelLengthTextBox.Text, TotalStopTextBox.Text, PrintedStopTextBox.Text);
+            int labelQuantity = int.Parse(TotalStopTextBox.Text);
+            int printLabel = int.Parse(PrintedStopTextBox.Text);
+            int difference = labelQuantity - printLabel;
+            try
+            {
+                if (difference >= 0)
+                {
+                    string returnValue = calc.FiftyFootStop(PixelLengthTextBox.Text, TotalStopTextBox.Text, PrintedStopTextBox.Text);
+                    NewTotalStopTextBox.Text = returnValue;
+                }
+                else
+                {
+                    MessageBox.Show("The new total is greater than the total images to print", "Negative Total", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Not all boxes were correctly filled in.", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
+
 
         private void PDOffSetButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void CheckBoxEmboss_Checked(object sender, RoutedEventArgs e)
+        {
+            if (CheckBoxEmboss.IsChecked == true)
+            {
+                extraFootage = 2;
+            }
+        }
+
+        private void CheckBoxHotStamp_Checked(object sender, RoutedEventArgs e)
+        {
+            if (CheckBoxHotStamp.IsChecked == true)
+            {
+                extraFootage = 4;
+            }
+        }
+
+        private void RadioButton0Percent_Checked(object sender, RoutedEventArgs e)
+        {
+            if (LabelQuanityTextBox.Text != "")
+            {
+                int orderLabelQuantity = int.Parse(LabelQuanityTextBox.Text);
+
+
+                if (RadioButton0Percent.IsChecked == true)
+                {
+                    if (orderLabelQuantity >= 10000)
+                    {
+                        percentage = 1.02;
+                    }
+                    else if (orderLabelQuantity <= 4999)
+                    {
+                        percentage = 1.05;
+                    }
+                    else
+                    {
+                        percentage = 1.1;
+                    }
+
+                }
+            }
+        }
+
+        private void RadioButton2Percent_Checked(object sender, RoutedEventArgs e)
+        {
+            if (RadioButton2Percent.IsChecked == true)
+            {
+                percentage = 1.02;
+            }
+        }
+
+        private void RadioButton5Percent_Checked(object sender, RoutedEventArgs e)
+        {
+            if (RadioButton5Percent.IsChecked == true)
+            {
+                percentage = 1.05;
+            }
+        }
+
+        private void RadioButton10Percent_Checked(object sender, RoutedEventArgs e)
+        {
+            if (RadioButton10Percent.IsChecked == true)
+            {
+                percentage = 1.1;
+            }
+        }
+
+        private void ComboBoxResolution_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> resolution = new List<string>();
+            resolution.Add("Select DPI");
+            resolution.Add("270 DPI");
+            resolution.Add("225 DPI");
+            resolution.Add("180 DPI");
+
+            var comboBox = sender as ComboBox;
+            comboBox.ItemsSource = resolution;
+            comboBox.SelectedIndex = 0;
         }
     }
 }
