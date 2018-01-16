@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace LabelCalculator
 {
@@ -14,6 +11,9 @@ namespace LabelCalculator
             return itemFootage = Math.Round(((pixelSize / 360) * double.Parse(totalLabels)), 2);
         }
 
+        /// <summary>
+        /// This function deals with calculations that need to show up in the textbox when the textboxes are filled in for 50' stop
+        /// </summary>
         public string FiftyFootStop(string pixels, string currentLabelQuantity, string printedLabelsQuantity)
         {
             pixelSize = double.Parse(pixels);
@@ -30,6 +30,10 @@ namespace LabelCalculator
             fiftyFeetImages = ((50 * 12) / (pixelSize / 360)) + 1;
         }
 
+        /// <summary>
+        /// This function takes the values that are passed is from the upper left textboxes and then uses them for various calcutions
+        /// throughout the class file
+        /// </summary>
         public void LabelInfo(string quantity, string pixel, string imageQuantity, string eyeMark)
         {
             labelQuantity = double.Parse(quantity);
@@ -50,6 +54,9 @@ namespace LabelCalculator
             return eighthPitch.ToString();
         }
 
+        /// <summary>
+        /// This is to calculate the number of images that will need to be printed to fullfil customers ordered quantity
+        /// </summary>
         public string LabelTotals(double overs, double extra)
         {
             double overPercentage = overs;
@@ -95,6 +102,12 @@ namespace LabelCalculator
             return threeHundredFoot.ToString();
         }
 
+
+        /// <summary>
+        /// The fucntions below are for the PD Off Set tab to calculate every row for each print head in the press.
+        /// Instead of passing in 20+ parameters, each row and print head is broken down to their own function that returns a string
+        /// for the textboxes
+        /// </summary>
         public string White1R1PDOffSet(string w1R1, double resolution)
         {
             double newW1R1 = (double.Parse(w1R1) * resolution) / 360;

@@ -8,10 +8,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LabelCalculator
 {
@@ -69,12 +65,22 @@ namespace LabelCalculator
             {
                 e.Handled = true;
 
-                if (0 == 0) { }
-                else
+                if (LabelsPerImageTextBox.Text != "" || LabelQuanityTextBox.Text != "" || PixelLengthTextBox.Text != "" || EyeMarksTextBox.Text != "")
                 {
                     try
                     {
+                        string labelsToPrint = calc.LabelTotals(percentage, extraFootage);
+                        calc.LabelInfo(LabelQuanityTextBox.Text, PixelLengthTextBox.Text, LabelsPerImageTextBox.Text, EyeMarksTextBox.Text);
 
+                        TotalLabelsTextBox.Text = labelsToPrint;
+                        TailTextBox.Text = calc.TailCalculation();
+                        LeaderTextBox.Text = calc.LeaderCalculation();
+                        ItemBlankTextBox.Text = calc.ItemBlankCalculation();
+                        FiftyFeetTextBox.Text = calc.FiftyFootCalculation();
+                        OneHundredFeetTextBox.Text = calc.OneHundredFootCalculation();
+                        ThreeHundredFeetTextBox.Text = calc.ThreeHundredFootCalcation();
+                        OneEighthPitchTextBox.Text = calc.EighthPitchCalculation();
+                        ThirtyTwoPitchTextBox.Text = calc.ThirtyTwoPitchCalculation();
                     }
                     catch
                     {
