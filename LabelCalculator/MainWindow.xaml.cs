@@ -128,7 +128,7 @@ namespace LabelCalculator
 
         private void ClearListButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //will remove this method
         }
 
         private void FiftyFootStopButton_Click(object sender, RoutedEventArgs e)
