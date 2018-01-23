@@ -30,6 +30,12 @@ namespace LabelCalculator
             fiftyFeetImages = ((50 * 12) / (pixelSize / 360)) + 1;
         }
 
+        public string CalculateTotalItemFootage(string labels)
+        {
+            double itemFootage = Math.Round((((pixelSize / 360) * double.Parse(labels)) / 12), 2);
+            return itemFootage.ToString();
+        }
+
         /// <summary>
         /// This function takes the values that are passed is from the upper left textboxes and then uses them for various calcutions
         /// throughout the class file
@@ -59,6 +65,7 @@ namespace LabelCalculator
         /// </summary>
         public string LabelTotals(double overs, double extra)
         {
+            CalcuateFiftyFeetImages();
             double overPercentage = overs;
             double embossOrHotStampExtra = extra * fiftyFeetImages;
             int labelTotal = (int)((labelQuantity / labelImages) * overPercentage + fiftyFeetImages + embossOrHotStampExtra) + 1;

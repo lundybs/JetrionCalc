@@ -72,8 +72,8 @@
                     </GroupBox>
                     <GroupBox x:Name="groupBox5" Header="Emboss or Hotstamp Selection" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Height="50" Width="200">
                         <Grid>
-                            <CheckBox x:Name="CheckBoxEmboss" Content="Emboss" HorizontalAlignment="Left" Margin="20,5,0,0" VerticalAlignment="Top" TabIndex="5" Checked="CheckBoxEmboss_Checked" KeyDown="EnterToTab"/>
-                            <CheckBox x:Name="CheckBoxHotStamp" Content="Hotstamp" HorizontalAlignment="Left" Margin="100,5,0,0" VerticalAlignment="Top" TabIndex="6" Checked="CheckBoxHotStamp_Checked" KeyDown="EnterToTab"/>
+                            <CheckBox x:Name="CheckBoxEmboss" Content="Emboss" HorizontalAlignment="Left" Margin="20,5,0,0" VerticalAlignment="Top" TabIndex="5" KeyDown="EnterToTab"/>
+                            <CheckBox x:Name="CheckBoxHotStamp" Content="Hotstamp" HorizontalAlignment="Left" Margin="100,5,0,0" VerticalAlignment="Top" TabIndex="6" KeyDown="EnterToTab"/>
 
                         </Grid>
                     </GroupBox>
@@ -82,10 +82,10 @@
                    
                     <GroupBox x:Name="groupBox6" Header="Overs" HorizontalAlignment="Left" Height="107.76" Margin="231,171,0,0" VerticalAlignment="Top" Width="65.4">
                         <Grid>
-                            <RadioButton x:Name="RadioButton0Percent" GroupName="Overs" Content="None" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" IsChecked="True" Checked="RadioButton0Percent_Checked"/>
-                            <RadioButton x:Name="RadioButton2Percent" GroupName="Overs" Content="2%" HorizontalAlignment="Left" Margin="5,30,0,0" VerticalAlignment="Top" Checked="RadioButton2Percent_Checked"/>
-                            <RadioButton x:Name="RadioButton5Percent" GroupName="Overs" Content="5%" HorizontalAlignment="Left" Margin="5.6,50,0,0" VerticalAlignment="Top" Checked="RadioButton5Percent_Checked"/>
-                            <RadioButton x:Name="RadioButton10Percent" GroupName="Overs" Content="10%" HorizontalAlignment="Left" Margin="5.6,70,0,0" VerticalAlignment="Top" Checked="RadioButton10Percent_Checked"/>
+                            <RadioButton x:Name="RadioButton0Percent" GroupName="Overs" Content="None" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                            <RadioButton x:Name="RadioButton2Percent" GroupName="Overs" Content="2%" HorizontalAlignment="Left" Margin="5,30,0,0" VerticalAlignment="Top"/>
+                            <RadioButton x:Name="RadioButton5Percent" GroupName="Overs" Content="5%" HorizontalAlignment="Left" Margin="5.6,50,0,0" VerticalAlignment="Top"/>
+                            <RadioButton x:Name="RadioButton10Percent" GroupName="Overs" Content="10%" HorizontalAlignment="Left" Margin="5.6,70,0,0" VerticalAlignment="Top"/>
                         </Grid>
                     </GroupBox>
                 </Grid>
