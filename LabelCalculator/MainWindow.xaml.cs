@@ -54,7 +54,6 @@ namespace LabelCalculator
             if (e.Key == Key.Enter)
             {
                 e.Handled = true;
-
                 if (LabelsPerImageTextBox.Text != "" && LabelQuanityTextBox.Text != "" && PixelLengthTextBox.Text != "" && EyeMarksTextBox.Text != "")
                 {
                     RunCalculations();
@@ -89,36 +88,41 @@ namespace LabelCalculator
             {
                 int orderLabelQuantity = int.Parse(LabelQuanityTextBox.Text);
 
-
                 if (RadioButton0Percent.IsChecked == true)
                 {
                     if (orderLabelQuantity >= 10000)
                     {
                         percentage = 1.02;
+                        lblTotal.Content = "Total for 2% is:";
                     }
                     else if (orderLabelQuantity <= 4999)
                     {
                         percentage = 1.1;
+                        lblTotal.Content = "Total for 10% is:";
                     }
                     else
                     {
                         percentage = 1.05;
+                        lblTotal.Content = "Total for 5% is:";
                     }
                 }
 
                 if (RadioButton10Percent.IsChecked == true)
                 {
                     percentage = 1.1;
+                    lblTotal.Content = "Total for 10% is:";
                 }
 
                 if (RadioButton2Percent.IsChecked == true)
                 {
                     percentage = 1.02;
+                    lblTotal.Content = "Total for 2% is:";
                 }
 
                 if (RadioButton5Percent.IsChecked == true)
                 {
                     percentage = 1.05;
+                    lblTotal.Content = "Total for 5% is:";
                 }
 
                 if (CheckBoxEmboss.IsChecked == true)
@@ -151,23 +155,15 @@ namespace LabelCalculator
             {
                 MessageBox.Show("You did not enter in a correct number", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-        }
-
-
-
-        private void ClearListButton_Click(object sender, RoutedEventArgs e)
-        {
-            //will remove this method
         }
 
         private void FiftyFootStopButton_Click(object sender, RoutedEventArgs e)
         {
             CalcLibrary calc = new CalcLibrary();
-
-            int labelQuantity = int.Parse(TotalStopTextBox.Text);
+            int _labelQuantity = int.Parse(TotalStopTextBox.Text);
             int printLabel = int.Parse(PrintedStopTextBox.Text);
-            int difference = labelQuantity - printLabel;
+            int difference = _labelQuantity - printLabel;
+
             try
             {
                 if (difference >= 0)
@@ -185,80 +181,6 @@ namespace LabelCalculator
                 MessageBox.Show("Not all boxes were correctly filled in.", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-        //private void CheckBoxEmboss_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (CheckBoxEmboss.IsChecked == true)
-        //    {
-        //        extraFootage = 2;
-        //    }
-        //    else
-        //    {
-        //        extraFootage = 0;
-        //    }
-        //}
-
-        //private void CheckBoxHotStamp_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (CheckBoxHotStamp.IsChecked == true)
-        //    {
-        //        extraFootage = 4;
-        //    }
-        //    else
-        //    {
-        //        extraFootage = 0;
-        //    }
-        //}
-
-        //private void RadioButton0Percent_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (LabelQuanityTextBox.Text != "")
-        //    {
-        //        int orderLabelQuantity = int.Parse(LabelQuanityTextBox.Text);
-
-
-        //        if (RadioButton0Percent.IsChecked == true)
-        //        {
-        //            if (orderLabelQuantity >= 10000)
-        //            {
-        //                percentage = 1.02;
-        //            }
-        //            else if (orderLabelQuantity <= 4999)
-        //            {
-        //                percentage = 1.05;
-        //            }
-        //            else
-        //            {
-        //                percentage = 1.1;
-        //            }
-
-        //        }
-        //    }
-        //}
-
-        //private void RadioButton2Percent_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (RadioButton2Percent.IsChecked == true)
-        //    {
-        //        percentage = 1.02;
-        //    }
-        //}
-
-        //private void RadioButton5Percent_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (RadioButton5Percent.IsChecked == true)
-        //    {
-        //        percentage = 1.05;
-        //    }
-        //}
-
-        //private void RadioButton10Percent_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (RadioButton10Percent.IsChecked == true)
-        //    {
-        //        percentage = 1.1;
-        //    }
-        //}
 
         private void ComboBoxResolution_Loaded(object sender, RoutedEventArgs e)
         {

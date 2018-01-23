@@ -4,35 +4,30 @@ namespace LabelCalculator
 {
     class CalcLibrary
     {
-        private double labelQuantity, labelImages, pixelSize, eyeMarks, fiftyFeetImages, itemFootage;
-
-        public double CalculateItemFootage(string totalLabels)
-        {
-            return itemFootage = Math.Round(((pixelSize / 360) * double.Parse(totalLabels)), 2);
-        }
+        private double _labelQuantity, _labelImages, _pixelSize, _eyeMarks, _fiftyFeetImages;
 
         /// <summary>
         /// This function deals with calculations that need to show up in the textbox when the textboxes are filled in for 50' stop
         /// </summary>
         public string FiftyFootStop(string pixels, string currentLabelQuantity, string printedLabelsQuantity)
         {
-            pixelSize = double.Parse(pixels);
+            _pixelSize = double.Parse(pixels);
             double currentLabel = double.Parse(currentLabelQuantity);
             double printedLabels = double.Parse(printedLabelsQuantity);
 
             CalcuateFiftyFeetImages();
-            int newQuantityOfLabels = (int)((currentLabel - printedLabels) + fiftyFeetImages);
+            int newQuantityOfLabels = (int)((currentLabel - printedLabels) + _fiftyFeetImages);
             return newQuantityOfLabels.ToString();
         }
 
         private void CalcuateFiftyFeetImages()
         {
-            fiftyFeetImages = ((50 * 12) / (pixelSize / 360)) + 1;
+            _fiftyFeetImages = ((50 * 12) / (_pixelSize / 360)) + 1;
         }
 
         public string CalculateTotalItemFootage(string labels)
         {
-            double itemFootage = Math.Round((((pixelSize / 360) * double.Parse(labels)) / 12), 2);
+            double itemFootage = Math.Round((((_pixelSize / 360) * double.Parse(labels)) / 12), 2);
             return itemFootage.ToString();
         }
 
@@ -42,21 +37,21 @@ namespace LabelCalculator
         /// </summary>
         public void LabelInfo(string quantity, string pixel, string imageQuantity, string eyeMark)
         {
-            labelQuantity = double.Parse(quantity);
-            labelImages = double.Parse(imageQuantity);
-            pixelSize = double.Parse(pixel);
-            eyeMarks = double.Parse(eyeMark);
+            _labelQuantity = double.Parse(quantity);
+            _labelImages = double.Parse(imageQuantity);
+            _pixelSize = double.Parse(pixel);
+            _eyeMarks = double.Parse(eyeMark);
         }
 
         public string ThirtyTwoPitchCalculation()
         {
-            int thirtyTwoPitch = (int)((((pixelSize / 360)) * (32 / Math.PI) / eyeMarks) + 1);
+            int thirtyTwoPitch = (int)((((_pixelSize / 360)) * (32 / Math.PI) / _eyeMarks) + 1);
             return thirtyTwoPitch.ToString();
         }
 
         public string EighthPitchCalculation()
         {
-            int eighthPitch = (int)((((pixelSize / 360) / .125) / eyeMarks) + 1);
+            int eighthPitch = (int)((((_pixelSize / 360) / .125) / _eyeMarks) + 1);
             return eighthPitch.ToString();
         }
 
@@ -67,48 +62,47 @@ namespace LabelCalculator
         {
             CalcuateFiftyFeetImages();
             double overPercentage = overs;
-            double embossOrHotStampExtra = extra * fiftyFeetImages;
-            int labelTotal = (int)((labelQuantity / labelImages) * overPercentage + fiftyFeetImages + embossOrHotStampExtra) + 1;
+            double embossOrHotStampExtra = extra * _fiftyFeetImages;
+            int labelTotal = (int)((_labelQuantity / _labelImages) * overPercentage + _fiftyFeetImages + embossOrHotStampExtra) + 1;
             return labelTotal.ToString();
         }
 
         public string TailCalculation()
         {
-            int tail = (int)((960 / (pixelSize / 360)) + 1);
+            int tail = (int)((960 / (_pixelSize / 360)) + 1);
             return tail.ToString();
         }
 
         public string LeaderCalculation()
         {
-            int leader = (int)((2700 / (pixelSize / 360)) + 1);
+            int leader = (int)((2700 / (_pixelSize / 360)) + 1);
             return leader.ToString();
         }
 
         public string ItemBlankCalculation()
         {
-            int itemBlank = (int)((84 / (pixelSize / 360)) + 1);
+            int itemBlank = (int)((84 / (_pixelSize / 360)) + 1);
             return itemBlank.ToString();
         }
 
         public string FiftyFootCalculation()
         {
             CalcuateFiftyFeetImages();
-            int fiftyFoot = (int)fiftyFeetImages;
+            int fiftyFoot = (int)_fiftyFeetImages;
             return fiftyFoot.ToString();
         }
 
         public string OneHundredFootCalculation()
         {
-            int oneHundredFoot = (int)(fiftyFeetImages * 2);
+            int oneHundredFoot = (int)(_fiftyFeetImages * 2);
             return oneHundredFoot.ToString();
         }
 
         public string ThreeHundredFootCalcation()
         {
-            int threeHundredFoot = (int)(fiftyFeetImages * 6);
+            int threeHundredFoot = (int)(_fiftyFeetImages * 6);
             return threeHundredFoot.ToString();
         }
-
 
         /// <summary>
         /// The fucntions below are for the PD Off Set tab to calculate every row for each print head in the press.
