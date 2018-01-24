@@ -76,6 +76,7 @@ namespace LabelCalculator
         private void CalcuateButton_Click(object sender, RoutedEventArgs e)
         {
             RunCalculations();
+            LabelQuanityTextBox.Focus();
         }
 
         private void RunCalculations()
@@ -149,7 +150,6 @@ namespace LabelCalculator
                 ThreeHundredFeetTextBox.Text = calc.ThreeHundredFootCalcation();
                 OneEighthPitchTextBox.Text = calc.EighthPitchCalculation();
                 ThirtyTwoPitchTextBox.Text = calc.ThirtyTwoPitchCalculation();
-                LabelQuanityTextBox.Focus();
             }
             catch
             {
